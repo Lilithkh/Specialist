@@ -12,6 +12,7 @@
 
 
 body{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: Muli , sans-serif ;
@@ -24,6 +25,11 @@ body{
     padding-bottom: 460px;
 }
 
+
+
+.hidden-menu{
+    display: none;
+}
 
 .header-items{
     border-bottom: 1px solid #e5e5e5;
@@ -141,7 +147,9 @@ body{
     background-color: #fbc02d ;
     margin: 30px auto 0;
 }
-
+.cards{
+    justify-content: space-between;
+}
 
 .announcement{
     width: 360px;
@@ -210,11 +218,15 @@ body{
 .creat-cv{
     position: absolute;
     left: 20%;
-    top: 36%;
+    top: 39%;
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 900;
     line-height: 50px;
+}
+
+.about-video{
+object-fit: cover
 }
 
 .bg-lights{
@@ -241,7 +253,7 @@ body{
     text-transform: uppercase;
     font-weight: 900;
     left: 20%;
-    top: 54%;
+    top: 58%;
     font-size: 20px;
     color: #707070;
 }
@@ -303,6 +315,8 @@ body{
 }
 
 .video{
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 .btn-play{
@@ -328,9 +342,9 @@ body{
     padding: 20px 20px 0 ;
 }
 .training-title{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px 10px 0 0;
+    padding: 10px  0;
     color: #616161;
     font-weight: 700;
 }
@@ -342,7 +356,7 @@ body{
 .exp-training{
     text-align: center;
     color: #cdcdcd;
-    margin: 10px 0;
+    margin: 4px 0;
 
 }
 
@@ -380,7 +394,7 @@ body{
 
 }
 
-.btn-send{
+.btn-subscribe{
     border: none;
     background-color: white;
     border-radius: 0;
@@ -404,6 +418,7 @@ body{
 }
 .feedback{
     margin: 80px 0;
+    justify-content: space-between;
 }
 
 .feedback-text{
@@ -495,8 +510,204 @@ padding-top: 50px;
 .footer-items{
     font-size: 12px;
 }
+
+.footer-info{
+    justify-content:space-between;
+}
+
 .copyright{
     text-align: center;
     margin-top: 10px;
 }
 
+@media screen and (max-width: 996px) {
+
+    .nav-2{
+        display: none;
+        position: relative;
+        width: 100%;
+        background-color: white;
+        transition: 0.5s;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-2 a{
+        padding: 20px 0;
+
+
+    }
+    .nav-2 a:hover{
+
+        background-color:#fbc02d ;
+        color: #616161;
+    }
+    .burger-menu{
+        position: absolute;
+    }
+    .hidden-menu {
+        margin: 20px 0;
+        display: flex;
+        font-size: 30px;
+        justify-content: flex-end;
+        color: #707070;
+        position: relative;
+        align-items: center;
+    }
+
+    .social, .header-item  {
+        display: none;
+    }
+    .banner{
+
+    }
+    .mountain{
+        flex-direction: column-reverse;
+    }
+    .text-main, .banner{
+        text-align: center;
+
+    }
+    .banner img{
+        width: 100%;
+    }
+    .btn-play{
+        display: none;
+    }
+    .about-us{
+        display: none;
+    }
+    .contact-us{
+        text-align: center;
+    }
+    .footer-info{
+        justify-content:center;
+    }
+
+
+}
+@media screen and (max-width: 600px){
+    .contact{
+        width: 370px;
+        height: 480px;
+
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .cards{
+        width: 100%;
+        justify-content: center;
+    }
+    .cards > .announcement, .company, .training{
+        margin: 10px;
+    }
+    .about-video{
+       height: 100%;
+        object-fit: cover;
+    }
+    .about-video img{
+        width: 100%;
+
+    }
+    .dots{
+        display: none;
+    }
+    .email {
+        top:65%;
+        right: auto;
+    }
+    .subscribe-text{
+        justify-content: center;
+    }
+    .subscribe-item{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .testimonials{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .feedback{
+        margin: 20px 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .feedback-text{
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 1500px){
+    .bg-lights > img {
+        width: 100%;
+        object-fit: none;
+        height: 650px;
+    }
+    .creat-cv{
+        line-height: 20px;
+        top: 40%;
+    }
+    .cv-text, .cv-yellow{
+        font-size: 40px;
+
+    }
+    .btn-free{
+        top: 50%;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+
+    .cards{
+        margin: 0;
+    }
+    .text-main > h1{
+        line-height: 30px;
+    }
+
+    .h1-main{
+        font-size: 30px;
+    }
+    .text-grey{
+        font-size: 20px;
+        margin: 0;
+      }
+
+    .text-grey-bold{
+        font-size: 30px;
+     }
+
+    .p-main{
+        font-size: 16px;
+    }
+    .creat-cv{
+        text-align: center;
+        line-height: 20px;
+        top: 40%;
+        left: 10%;
+    }
+
+    .subscribe-item> img{
+        width: 80%;
+        text-align: center;
+    }
+    .email {
+        width: 80%;
+        top:65%;
+    }
+    .subscribe-text{
+        justify-content: center;
+    }
+    .subscribe-item{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+}
